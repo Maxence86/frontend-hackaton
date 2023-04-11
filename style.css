@@ -1,0 +1,156 @@
+* {margin:0px;
+padding:0px}
+
+#container {
+    display:grid;
+    grid-template-rows: repeat(14, 1fr);
+    height: 100vh;
+}
+
+
+#header {
+    display:flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    grid-row-start: 1 ;
+    grid-row-end: 2;
+    padding: 10px;
+
+  }
+
+  #btn-header {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  #cart-btn {
+border : none;
+  }
+
+  #booking-btn {
+    border : none;
+      }
+    
+
+  #logo {
+    color: #4faa92
+  }
+
+  #content {
+    background-image: url("/frontend-hackaton/images/background.jpg");
+    background-position: cover;
+    background-size: cover;
+    grid-row-start: 2 ;
+    grid-row-end: 14;
+  }
+
+  #footer {
+    grid-row-start: 14 ;
+    grid-row-end: 15;
+  }
+
+  h1 {
+    color: #f2f2f2;
+  }
+
+  h2 {
+    color: #f2f2f2;
+  }
+
+
+  #slogan-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+
+  #booking-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  
+  #booking-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+    background-color: white;
+    height: 50vh;
+    width: 22vw;
+    padding: 10px;
+    border-radius: 10px;
+
+  }
+
+  #booking-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    height: 50vh;
+    width: 22vw;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  #checkin-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #img-train {
+    width: 40%;
+    height: 40%;
+  }
+
+  #trait {
+    width: 80%;
+    border: 1px solid #4faa92;
+  }
+
+  #btn-search {
+    height: 10%;
+    color:#f2f2f2;
+    background-color: #4faa92;
+    border: none;
+    border-radius: 5px;
+  }
+
+#add-departure {
+    height: 50%;
+    border: none;
+    background-color: #f2f3f3;
+    border-bottom: 1px solid gray;
+    border-radius: 5px;
+    padding-left: 5px;
+
+}
+
+#add-arrival {
+    height: 50%;
+    background-color: #f2f3f3;
+    border:none;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#checkin-box {
+    height: 20%;
+}
+
+#calendar {
+    height: 10%;
+    background-color: #f2f3f3;
+    border:none;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
