@@ -32,5 +32,4 @@ fetch("http://localhost:3000/cart")
           </div>`
           cartCont.style.overflow = "auto"
         }
-
 })
