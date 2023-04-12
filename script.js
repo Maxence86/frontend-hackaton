@@ -21,32 +21,31 @@ searchBtn.addEventListener("click" , function(){
     console.log("Arrivée:", arrivalValue);
     console.log("date", dateValue);
 
-    let filter = {
-        departure : departureValue,
-        arrival: arrivalValue,
-        date: dateValue
-    }
 
     fetch ('http://localhost:3000/trips',
-    {method: 'GET',
+    {method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({filter}),
+    body: JSON.stringify({departure : departureValue,
+    arrival : arrivalValue,
+    date: dateValue}),
     }
     )
     .then(response => response.json())
     .then(data => {
-    
-    const trips = data.data.filter(e => e.departure.toLowerCase() == departureValue.toLowerCase() && e.arrival.toLowerCase() == arrivalValue.toLowerCase() 
-             && new Date(e.date).getDay() == new Date(dateValue).getDay() &&
-              )
-         console.log(new Date(data.data[0].date).getDay())
-        console.log(new Date(dateValue).getDay())
-        console.log(new Date(data.data[0].date).getMonth())
-        console.log(new Date(dateValue).getMonth())
-        // console.log(moment().format('MMMM Do YYYY, h:mm:ss a'))
+        console.log(data)
+        let inner = ""
+        for (let items of data.newTrips) {
+            inner += 
+            `<div class="trips">
+            <p>${items.departure} > ${items.arrival}</p>
+            <p>${items.date}</p>
+            <p>${items.price} €</p>
+            <button id="btn-book" type="button">Book</button>
+        </div>`}
 
-            
-          console.log(data.data[0])
+        cartContainer.innerHTML = inner
+        cartContainer.style.overflow = "auto"
+        // cartContainer.id = "#booking-choice2"
     })
 
 
